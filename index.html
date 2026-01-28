@@ -76,4 +76,180 @@
     video {
       width:100%;
       border-radius: 16px;
-      bord
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+
+    iframe { width: 100%; height: 360px; border:0; border-radius: 16px; }
+
+    .fine { color: var(--muted); font-size: 12px; line-height:1.6; margin-top: 10px; }
+    footer { margin: 26px 0 10px; color: var(--muted); font-size: 12px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge">🏞️ Lake Anna • Waterfront Land for Sale</div>
+      <div class="btns">
+        <a class="btn primary" href="#contact">Request Info</a>
+        <a class="btn" href="#photos">Photos</a>
+        <a class="btn" href="#tour">Virtual Tour</a>
+        <a class="btn" href="#map">Map</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>3407 Fisherman Way, Bumpass, VA 23024</h1>
+        <p class="sub">
+          <strong>Asking Price:</strong> <span class="price">$550,000</span><br/>
+          Waterfront lot on Lake Anna with a <strong>private boat slip</strong>. Ready for your custom build.
+        </p>
+
+        <div class="grid4" aria-label="Key property stats">
+          <div class="stat">
+            <div class="k">Waterfront</div>
+            <div class="v">Yes (Lake Anna)</div>
+          </div>
+          <div class="stat">
+            <div class="k">Boat Slip</div>
+            <div class="v">Private</div>
+          </div>
+          <div class="stat">
+            <div class="k">Septic / Perc</div>
+            <div class="v">4-bedroom approved</div>
+          </div>
+          <div class="stat">
+            <div class="k">Survey</div>
+            <div class="v">Completed</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Highlights</h2>
+          <ul class="list">
+            <li><strong>True waterfront</strong> — lot is attached to the lake for direct access.</li>
+            <li><strong>Private boat slip</strong> — enjoy boating without the hassle.</li>
+            <li><strong>Perc test completed</strong> and <strong>approved for a 4-bedroom home</strong>.</li>
+            <li><strong>Backup leach site provision</strong> available on the lot.</li>
+            <li><strong>Well site included</strong> in the survey documentation.</li>
+            <li><strong>Complete land survey done</strong> showing boundaries and setbacks.</li>
+            <li><strong>Zoning/HOA restrictions:</strong> None (per seller).</li>
+          </ul>
+          <p class="fine">
+            Buyer to verify all property characteristics with county records and any applicable neighborhood rules.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" id="contact">
+        <h2>Contact</h2>
+        <p class="sub">Call/text or email for survey/perc details, showing info, and purchase process.</p>
+
+        <div class="btns" style="margin: 10px 0 12px;">
+          <!-- Replace these with your real contact info -->
+          <a class="btn primary" href="tel:+1XXXXXXXXXX">📞 Call / Text</a>
+          <a class="btn" href="mailto:youremail@example.com?subject=Inquiry%20-%203407%20Fisherman%20Way%20Waterfront%20Land&body=Hi%2C%20I%27m%20interested%20in%20the%20waterfront%20land%20at%203407%20Fisherman%20Way.%20Please%20send%20details.%0A%0AName%3A%0APhone%3A%0AQuestions%3A">✉️ Email</a>
+        </div>
+
+        <ul class="list">
+          <li><strong>Address:</strong> 3407 Fisherman Way, Bumpass, VA 23024</li>
+          <li><strong>Price:</strong> $550,000</li>
+          <li><strong>Key docs:</strong> Survey, setbacks/boundaries, perc approval, well site info</li>
+        </ul>
+
+        <p class="fine">
+          Tip: If you want a contact form that collects leads, tell me what email you want it to deliver to and I’ll wire it up.
+        </p>
+      </div>
+    </section>
+
+    <section class="section cols">
+      <div class="card">
+        <h2>Property Details</h2>
+        <ul class="list">
+          <li><strong>Waterfront:</strong> Yes — attached to Lake Anna</li>
+          <li><strong>Boat slip:</strong> Private slip included</li>
+          <li><strong>Perc:</strong> Approved for a 4-bedroom house</li>
+          <li><strong>Backup leach site:</strong> Provision included</li>
+          <li><strong>Well site:</strong> Included in survey</li>
+          <li><strong>Survey:</strong> Completed (boundaries + setbacks shown)</li>
+          <li><strong>Zoning/HOA restrictions:</strong> None (per seller)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>FAQs</h2>
+        <ul class="list">
+          <li><strong>Can I build a 4-bedroom home?</strong> Yes — lot is approved for a 4-bedroom septic system (perc completed).</li>
+          <li><strong>Is there a backup plan for septic?</strong> Yes — there is provision for a backup leach site.</li>
+          <li><strong>Where is the well location?</strong> The well site is included in the survey.</li>
+          <li><strong>Any HOA or zoning restrictions?</strong> None (per seller). Buyer should still verify with the county.</li>
+          <li><strong>How do I tour it?</strong> Contact seller for access instructions and best times to visit.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section card" id="photos">
+      <h2>Photo Gallery</h2>
+      <p class="sub">Upload your photos into <strong>/media</strong> and name them <strong>image1</strong> through <strong>image6</strong>. The page will load them automatically.</p>
+
+      <div class="gallery">
+        <img class="img" src="media/image1.jpg" alt="Photo 1 - waterfront land" loading="lazy" />
+        <img class="img" src="media/image2.jpg" alt="Photo 2 - lot view" loading="lazy" />
+        <img class="img" src="media/image3.jpg" alt="Photo 3 - shoreline view" loading="lazy" />
+        <img class="img" src="media/image4.jpg" alt="Photo 4 - lake view" loading="lazy" />
+        <img class="img" src="media/image5.jpg" alt="Photo 5 - access / neighborhood" loading="lazy" />
+        <img class="img" src="media/image6.jpg" alt="Photo 6 - additional view" loading="lazy" />
+      </div>
+
+      <p class="fine">
+        If your files are PNG (e.g., image1.png), update the extensions above from .jpg to .png.
+      </p>
+    </section>
+
+    <section class="section card" id="tour">
+      <h2>3D Virtual Tour (MP4 Videos)</h2>
+      <p class="sub">
+        Upload MP4 files into <strong>/media</strong> and name them <strong>tour1.mp4</strong>, <strong>tour2.mp4</strong> (or add more).
+      </p>
+
+      <div class="videos">
+        <video controls preload="metadata" playsinline>
+          <source src="media/tour1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <video controls preload="metadata" playsinline>
+          <source src="media/tour2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <p class="fine">
+        Video tip: Keep each MP4 under ~50–100MB for fast loading. If your videos are large, consider hosting them on YouTube/Vimeo and embedding them instead.
+      </p>
+    </section>
+
+    <section class="section card" id="map">
+      <h2>Map</h2>
+      <p class="sub">Interactive map centered on the property address.</p>
+      <iframe
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=3407%20Fisherman%20Way%2C%20Bumpass%2C%20VA%2023024&output=embed">
+      </iframe>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Waterfront Land — 3407 Fisherman Way</div>
+      <div class="fine">Buyer to verify all details with county/HOA and review survey/perc documentation.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
