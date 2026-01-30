@@ -3,95 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3407 Fisherman Way | Luxury Land at Lake Anna</title>
+    <title>3407 Fisherman Way | Waterfront Luxury at Lake Anna</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80'); }
-        .blur-nav { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.8); }
+        /* Placeholder hero image until you have your own */
+        .hero-gradient { 
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('media/image1.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+        .blur-nav { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.85); }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
     <nav class="fixed w-full z-50 blur-nav border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="font-bold text-xl tracking-tight text-slate-800">3407 FISHERMAN WAY</span>
-            <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Contact Owner</a>
+            <span class="font-bold text-xl tracking-tight text-blue-900">3407 FISHERMAN WAY</span>
+            <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <a href="#details" class="hover:text-blue-600">Details</a>
+                <a href="#gallery" class="hover:text-blue-600">Gallery</a>
+                <a href="#survey" class="hover:text-blue-600">Survey & Specs</a>
+            </div>
+            <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Inquire: $550,000</a>
         </div>
     </nav>
 
-    <section class="hero-gradient h-screen bg-cover bg-center flex items-center justify-center text-white text-center px-4">
+    <section class="hero-gradient h-screen flex items-center justify-center text-white text-center px-4">
         <div class="max-w-4xl">
-            <span class="uppercase tracking-widest text-sm font-semibold mb-4 block text-blue-300">New Listing | Rockland Creek Estates</span>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">Build Your Dream at Lake Anna</h1>
-            <p class="text-xl md:text-2xl mb-8 opacity-90">1.44 Acres of pristine, wooded privacy in a gated lakeside community.</p>
+            <span class="uppercase tracking-widest text-sm font-bold mb-4 block text-blue-300 bg-blue-900/40 inline-block px-4 py-1 rounded">Rare Waterfront Opportunity</span>
+            <h1 class="text-5xl md:text-8xl font-bold mb-6">Lake Anna Living</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-95">1.44 Acres of True Waterfront with Private Boat Slip</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#video" class="bg-white text-slate-900 px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition">Watch Film</a>
-                <a href="#details" class="bg-transparent border-2 border-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition">Explore Details</a>
+                <a href="#contact" class="bg-blue-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 shadow-lg transition">Make an Offer</a>
+                <a href="#video" class="bg-white/20 backdrop-blur-md border border-white/30 px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/40 transition">Watch Video Tour</a>
             </div>
         </div>
     </section>
 
-    <div class="max-w-5xl mx-auto -mt-12 bg-white shadow-xl rounded-xl p-8 relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div><p class="text-slate-500 text-sm uppercase">Lot Size</p><p class="text-2xl font-bold">1.44 AC</p></div>
-        <div><p class="text-slate-500 text-sm uppercase">Community</p><p class="text-2xl font-bold">Gated</p></div>
-        <div><p class="text-slate-500 text-sm uppercase">Water Access</p><p class="text-2xl font-bold">Deeded</p></div>
-        <div><p class="text-slate-500 text-sm uppercase">County</p><p class="text-2xl font-bold">Spotsylvania</p></div>
-    </div>
-
-    <section id="video" class="py-20 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold mb-4">Property Showcase</h2>
-            <p class="text-slate-600 max-w-2xl mx-auto">Take a 3-minute guided tour of the lot and the exclusive community amenities at Rockland Creek Estates.</p>
-        </div>
-        <div class="aspect-video bg-slate-200 rounded-3xl overflow-hidden shadow-2xl relative">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Property Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <section class="py-20 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-4xl font-bold mb-6">Immersive 360° View</h2>
-                <p class="text-slate-400 mb-8 text-lg">Don't just look at photos—stand in the middle of your future backyard. Use your mouse or phone to look around the wooded perimeter of 3407 Fisherman Way.</p>
-                <ul class="space-y-4">
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-blue-400"></i> Clear buildable topography</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-blue-400"></i> Mature hardwood canopy</li>
-                </ul>
-            </div>
-            <div class="bg-slate-800 rounded-2xl h-[400px] flex items-center justify-center border border-slate-700 relative overflow-hidden">
-                <p class="text-slate-500 italic">360° Panorama Interactive Zone<br>(Upload your 360 image to Panoraven or Kuula to embed here)</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 max-w-7xl mx-auto px-6">
-        <h2 class="text-4xl font-bold mb-12 text-center">Gallery</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="h-64 bg-slate-300 rounded-xl overflow-hidden"><img src="https://via.placeholder.com/600x400?text=Aerial+Shot" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-            <div class="h-64 bg-slate-300 rounded-xl overflow-hidden"><img src="https://via.placeholder.com/600x400?text=Lot+View" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-            <div class="h-64 bg-slate-300 rounded-xl overflow-hidden"><img src="https://via.placeholder.com/600x400?text=Community+Dock" class="w-full h-full object-cover hover:scale-105 transition duration-500"></div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-blue-600 text-white">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-4">Interested in 3407 Fisherman Way?</h2>
-            <p class="text-blue-100 mb-10">Direct inquiries to the owner. Build your Lake Anna legacy today.</p>
-            <form class="space-y-4">
-                <div class="grid md:grid-cols-2 gap-4">
-                    <input type="text" placeholder="Full Name" class="p-4 rounded-lg w-full text-slate-900 focus:outline-none">
-                    <input type="email" placeholder="Email Address" class="p-4 rounded-lg w-full text-slate-900 focus:outline-none">
-                </div>
-                <textarea placeholder="Your Message" rows="4" class="p-4 rounded-lg w-full text-slate-900 focus:outline-none"></textarea>
-                <button class="w-full bg-slate-900 py-4 rounded-lg font-bold hover:bg-slate-800 transition">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="py-10 text-center text-slate-400 text-sm">
-        <p>3407 Fisherman Way, Bumpass, VA 23024 | Gated Rockland Creek Estates</p>
-    </footer>
-
-</body>
-</html>
+    <div id="details" class="max-w-6xl mx-auto -mt-16 bg-white shadow-2xl rounded-2xl p-10 relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center border border-slate-100">
+        <div><i class="fa-solid fa-water text-blue-500 text-xl mb-2"></i><p class="text-slate-500 text-xs uppercase font-bold tracking-wider">Access</p><p class="text-xl font-bold">Waterfront</p></div>
+        <div><i class="fa-solid fa-ship text-blue-500 text-xl mb-2"></i><p class="text-slate-500 text-xs uppercase font-bold tracking-wider">Boating</p><p class="text
