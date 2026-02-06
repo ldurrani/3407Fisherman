@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waterfront Land for Sale - Lake Anna, VA | 3407 Fisherman Way</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 40, 80, 0.6), rgba(0, 40, 80, 0.6)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23006994" width="1200" height="600"/><path fill="%23004d6d" opacity="0.5" d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z"/><circle fill="%2366c2ff" opacity="0.3" cx="900" cy="150" r="100"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px 80px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 300;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .hero .location {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Property Highlights */
+        .highlights {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .highlights h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #006994;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .highlight-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .highlight-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #006994;
+        }
+
+        .highlight-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        /* Details Section */
+        .details {
+            padding: 60px 20px;
+        }
+
+        .details h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #006994;
+            text-align: center;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .detail-item {
+            padding: 15px;
+            border-left: 4px solid #006994;
+            background: #f8f9fa;
+        }
+
+        .detail-item strong {
+            color: #006994;
+            font-size: 1.1em;
+        }
+
+        /* About Lake Anna */
+        .about-lake {
+            background: linear-gradient(135deg, #006994 0%, #004d6d 100%);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .about-lake h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-lake .content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .about-lake ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .about-lake li {
+            margin: 10px 0;
+        }
+
+        /* Investment Opportunity */
+        .investment {
+            padding: 60px 20px;
+            background: #fff;
+        }
+
+        .investment h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #006994;
+            text-align: center;
+        }
+
+        .investment-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .investment-content p {
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .gallery h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #006994;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Video Tour */
+        .video-tour {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+
+        .video-tour h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #006994;
+            text-align: center;
+        }
+
+        .video-tour p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .lightbox-close:hover {
+            color: #ff6b35;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #006994;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 30px auto;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h3 {
+            color: #006994;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2em;
+            }
+
+            .detail-grid {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .highlights h2, .details h2, .about-lake h2, .investment h2, .contact h2 {
+                font-size: 2em;
+            }
+        }
+
+        /* Scroll animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Prime Waterfront Land</h1>
+        <p class="subtitle">Lake Anna's Premier Location</p>
+        <p class="location">3407 Fisherman Way, Bumpass, Virginia 23024</p>
+        <p style="font-size: 2.5em; font-weight: bold; margin: 20px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">$550,000</p>
+        <a href="#contact" class="cta-button">Inquire Now</a>
+    </section>
+
+    <!-- Property Highlights -->
+    <section class="highlights">
+        <div class="container">
+            <h2>Property Highlights</h2>
+            <div class="highlight-grid">
+                <div class="highlight-card fade-in">
+                    <div class="highlight-icon">🏞️</div>
+                    <h3>1.44 Acres</h3>
+                    <p>Spacious 62,726 sq ft lot with ample room for your dream lakefront home</p>
+                </div>
+                <div class="highlight-card fade-in">
+                    <div class="highlight-icon">🌊</div>
+                    <h3>Direct Waterfront</h3>
+                    <p>Lake Anna waterfront with private boat slip included</p>
+                </div>
+                <div class="highlight-card fade-in">
+                    <div class="highlight-icon">✅</div>
+                    <h3>Build-Ready</h3>
+                    <p>Perc test complete, approved for 4-bedroom home</p>
+                </div>
+                <div class="highlight-card fade-in">
+                    <div class="highlight-icon">🎣</div>
+                    <h3>Recreation Paradise</h3>
+                    <p>Fishing, boating, swimming right from your property</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Details -->
+    <section class="details">
+        <div class="container">
+            <h2>Property Details</h2>
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <strong>Address:</strong><br>
+                    3407 Fisherman Way, Bumpass, VA 23024
+                </div>
+                <div class="detail-item">
+                    <strong>Price:</strong><br>
+                    $550,000
+                </div>
+                <div class="detail-item">
+                    <strong>Lot Size:</strong><br>
+                    1.44 acres (62,726 sq ft)
+                </div>
+                <div class="detail-item">
+                    <strong>Location:</strong><br>
+                    Lake Anna Direct Waterfront
+                </div>
+                <div class="detail-item">
+                    <strong>Boat Slip:</strong><br>
+                    Private boat slip included
+                </div>
+                <div class="detail-item">
+                    <strong>Perc Test:</strong><br>
+                    Complete - Approved for 4 BR home
+                </div>
+                <div class="detail-item">
+                    <strong>Well Site:</strong><br>
+                    Included in survey
+                </div>
+                <div class="detail-item">
+                    <strong>Septic:</strong><br>
+                    Primary + backup leach site
+                </div>
+                <div class="detail-item">
+                    <strong>Survey:</strong><br>
+                    Complete with boundaries & setbacks
+                </div>
+                <div class="detail-item">
+                    <strong>Zoning & HOA:</strong><br>
+                    No restrictions
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Lake Anna -->
+    <section class="about-lake">
+        <div class="container">
+            <h2>Discover Lake Anna</h2>
+            <div class="content">
+                <p>Lake Anna is Virginia's second-largest freshwater lake, spanning 13,000 acres with over 200 miles of scenic shoreline. This premier recreational destination offers the perfect blend of natural beauty and modern convenience.</p>
+                
+                <p><strong>Why Lake Anna?</strong></p>
+                <ul>
+                    <li>🏖️ <strong>Two Distinct Sides:</strong> Public side with marinas and businesses; private side for exclusive property owner access</li>
+                    <li>🌡️ <strong>Warm Water:</strong> The private side features naturally warmer water year-round, extending your swimming season</li>
+                    <li>🚗 <strong>Convenient Access:</strong> Just 70 miles from Richmond, easy access to Washington DC and Northern Virginia</li>
+                    <li>✈️ <strong>Close to Airport:</strong> Richmond International Airport only 54 miles away</li>
+                    <li>🎣 <strong>Trophy Fishing:</strong> Known for largemouth bass, striped bass, and excellent fishing year-round</li>
+                    <li>⛵ <strong>Boating Paradise:</strong> Multiple marinas, boat launches, and rental facilities nearby</li>
+                    <li>🏘️ <strong>Growing Community:</strong> Over 100 established neighborhoods with various amenities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Opportunity -->
+    <section class="investment">
+        <div class="container">
+            <h2>Investment Opportunity</h2>
+            <div class="investment-content">
+                <p>Waterfront property at Lake Anna represents a rare and valuable investment opportunity. With demand continuing to grow due to the area's proximity to major metropolitan areas and limited waterfront availability, this is your chance to secure a piece of Virginia's most sought-after lake destination.</p>
+
+                <p><strong>Build-Ready Property:</strong> This lot is fully prepared for development with completed perc testing approved for a 4-bedroom home, surveyed well site, primary and backup leach field locations, and complete boundary survey with setbacks. No HOA restrictions mean you have the freedom to build your dream home exactly as you envision it.</p>
+
+                <p><strong>Premium Amenities:</strong> The included private boat slip provides immediate water access for your watercraft. Enjoy direct lake frontage with the convenience of your own dedicated slip—a rare combination that adds significant value to this property.</p>
+
+                <p><strong>Area Growth:</strong> Lake Anna continues to experience steady growth with new developments, improved infrastructure, and increasing property values. The area offers a perfect balance of peaceful lakeside living with convenient access to urban amenities.</p>
+
+                <p><strong>Nearby Attractions:</strong> George Washington's Ferry Farm, Fredericksburg Battlefield, Lake Anna State Park, multiple golf courses, wineries, and vibrant local communities all within easy reach.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery">
+        <div class="container">
+            <h2>Property Photos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/img/image1.jpg" alt="Lake Anna Waterfront Property View 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/image2.jpg" alt="Lake Anna Waterfront Property View 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/image3.jpg" alt="Lake Anna Waterfront Property View 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/image4.jpg" alt="Lake Anna Waterfront Property View 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/image5.jpg" alt="Lake Anna Waterfront Property View 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tour -->
+    <section class="video-tour">
+        <div class="container">
+            <h2>3D Virtual Tour</h2>
+            <p>Take a virtual walkthrough of this beautiful Lake Anna waterfront property</p>
+            <div class="video-container">
+                <video controls poster="assets/img/image1.jpg">
+                    <source src="assets/video/Lake_Anne_Land_Sale.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Interested? Let's Talk</h2>
+            <p>Don't miss this rare opportunity to own prime waterfront property on Lake Anna. Contact us today to schedule a viewing or learn more about this exceptional property.</p>
+            
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Property Address:</strong><br>3407 Fisherman Way<br>Bumpass, Virginia 23024</p>
+                <p style="margin-top: 30px; font-size: 0.95em; color: #666;">
+                    📧 <strong>Email:</strong> ml.durr@yahoo.com<br>
+                    📱 <strong>Phone:</strong> (571) 621-3381
+                </p>
+            </div>
+
+            <a href="mailto:ml.durr@yahoo.com" class="cta-button" style="margin-top: 30px;">Send an Email</a>
+        </div>
+    </section>
+
+    <!-- Lightbox for Gallery Images -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Property Image">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Lake Anna Waterfront Property - 3407 Fisherman Way, Bumpass, VA</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">All information deemed reliable but not guaranteed. Buyers should verify all details.</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.highlight-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Lightbox functionality for gallery
+        function openLightbox(src) {
+            document.getElementById('lightbox').classList.add('active');
+            document.getElementById('lightbox-img').src = src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Add click handlers to gallery items
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function() {
+                openLightbox(this.src);
+            });
+        });
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
