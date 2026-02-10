@@ -183,6 +183,28 @@
       font-size: 13px;
       line-height: 1.6;
     }
+    .badge-row{
+  display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;
+}
+.badge{
+  font-size:12px; color:var(--muted);
+  padding:6px 10px; border-radius:999px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+}
+.value-grid{
+  display:grid; grid-template-columns: 1fr 1fr; gap:12px;
+}
+@media (max-width: 900px){ .value-grid{grid-template-columns:1fr} }
+.value-item{
+  border:1px solid var(--border);
+  border-radius: 16px;
+  padding:14px;
+  background: rgba(255,255,255,.03);
+}
+.value-item b{display:block; margin-bottom:6px; font-size:14px}
+.value-item p{margin:0; color:var(--muted); font-size:13px; line-height:1.6}
+
   </style>
 </head>
 
@@ -195,6 +217,7 @@
       </div>
       <div class="nav-links">
         <a class="pill" href="#highlights">Highlights</a>
+        <a class="pill" href="#why-better">Why This Lot</a>
         <a class="pill" href="#video">Virtual Tour</a>
         <a class="pill" href="#gallery">Gallery</a>
         <a class="pill" href="#docs">Included Docs</a>
@@ -268,6 +291,108 @@
         </div>
       </div>
     </header>
+
+    <section class="section" id="why-better">
+  <h2>Why this lot is better than most waterfront lots</h2>
+
+  <div class="card pad">
+    <p class="note" style="margin-top:0;">
+      Waterfront lots often look similar online — but many come with hidden delays and expensive surprises.
+      This property is different: the critical due diligence is already complete, and key documents are included at no additional cost.
+    </p>
+
+    <div class="badge-row">
+      <span class="badge">4BR Perc Approved</span>
+      <span class="badge">Septic Design Included</span>
+      <span class="badge">Primary + Backup Leach</span>
+      <span class="badge">Survey + Corners Marked</span>
+      <span class="badge">Topo Survey Complete</span>
+      <span class="badge">House + Driveway Sited</span>
+      <span class="badge">Architect Plans Included</span>
+      <span class="badge">Deeded Private Boat Slip</span>
+      <span class="badge">Gated Community</span>
+      <span class="badge">Lake Views to Water + Slip</span>
+    </div>
+
+    <div style="height:12px"></div>
+
+    <div class="value-grid">
+      <div class="value-item">
+        <b>1) Perc/soil test already done — no surprises</b>
+        <p>
+          Many lake-area lots fail perc testing or require costly redesigns. This lot has already been tested and approved to support
+          at least a <b>4-bedroom</b> home — giving you confidence before you build.
+        </p>
+      </div>
+
+      <div class="value-item">
+        <b>2) Septic system engineered — with backup leach area</b>
+        <p>
+          A professionally designed <b>4-bedroom septic system plan</b> is included, with both the primary and
+          <b>backup leach field location</b> identified — helping protect your investment long term.
+        </p>
+      </div>
+
+      <div class="value-item">
+        <b>3) Boundary survey complete — corners marked</b>
+        <p>
+          The land survey is already completed with property corners identified, boundaries mapped, and setbacks documented —
+          saving you time and cost.
+        </p>
+      </div>
+
+      <div class="value-item">
+        <b>4) Topographical survey complete</b>
+        <p>
+          A topo survey has already been completed to support planning, permitting, and accurate placement of the home, driveway, and utilities.
+        </p>
+      </div>
+
+      <div class="value-item">
+        <b>5) Home + driveway placement already laid out with setbacks</b>
+        <p>
+          The planned home site and driveway location have already been laid out to meet county setbacks, helping streamline the permitting process.
+        </p>
+      </div>
+
+      <div class="value-item">
+        <b>6) Custom architect-designed 4-bedroom home plans included</b>
+        <p>
+          A professional architect has designed a custom <b>4-bedroom lakefront home</b> for this lot.
+          Architectural and structural design documents are included at no additional cost — use them or customize your own.
+        </p>
+      </div>
+
+      <div class="value-item">
+        <b>7) Deeded private boat slip included</b>
+        <p>
+          The boat slip is <b>private and deeded</b> as part of the property — a major value feature that many “waterfront” lots do not include.
+        </p>
+      </div>
+
+      <div class="value-item">
+        <b>8) Planned home captures lake views to the water and slip</b>
+        <p>
+          Not all waterfront lots have a strong view corridor. The planned home placement is designed to take advantage of water views and visibility toward the slip.
+        </p>
+      </div>
+
+      <div class="value-item">
+        <b>9) Located in a well-kept gated community</b>
+        <p>
+          Enjoy the security and pride of ownership that comes with a gated neighborhood that is maintained and cared for year-round.
+        </p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="cta">
+      <a class="btn alt" href="mailto:ml.durr@yahoo.com?subject=3407%20Fisherman%20Way%20-%20Request%20Docs">Request Docs</a>
+      <a class="btn" href="tel:+15716213381">Call / Text</a>
+    </div>
+  </div>
+</section>
 
     <section class="section" id="video">
       <h2>Virtual Tour</h2>
