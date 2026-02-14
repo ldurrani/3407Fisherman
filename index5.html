@@ -138,6 +138,19 @@
       background: rgba(79,209,197,.12);
     }
 
+    .btn.primary{
+  background: linear-gradient(135deg, #ff8a00, #ff5e00);
+  border: none;
+  color: white;
+  font-weight:700;
+  box-shadow: 0 8px 20px rgba(255,120,0,.35);
+}
+.btn.primary:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(255,120,0,.55);
+}
+
+
     .hero-media{
       display:grid; gap:10px;
       padding: 0 22px 22px;
@@ -421,7 +434,8 @@
       <input type="hidden" name="_subject" value="New inquiry: 3407 Fisherman Way (Lake Anna Land)" />
 
       <div class="cta" style="margin-top:14px;">
-        <button class="btn alt" type="submit">Send Message</button>
+        <button class="btn primary" type="submit">Send Message</button>
+
         <a class="btn" href="tel:+15716213381">Call / Text</a>
         <a class="btn" href="mailto:ml.durr@yahoo.com?subject=3407%20Fisherman%20Way%20-%20Inquiry">Email</a>
       </div>
