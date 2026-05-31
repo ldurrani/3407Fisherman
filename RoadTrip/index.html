@@ -12,326 +12,252 @@
       --dark: #222;
       --card: #ffffff;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
     header {
-      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') center/cover;
-      color: white;
-      text-align: center;
-      padding: 90px 20px;
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url('assets/photos/01_branson.jpg') center/cover;
+      color: white; text-align: center; padding: 90px 20px;
     }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 12px;
-    }
-
-    header p {
-      font-size: 1.25rem;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    nav {
-      background: var(--primary);
-      padding: 12px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: var(--secondary);
-    }
-
-    section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .section-title {
-      color: var(--primary);
-      font-size: 2rem;
-      margin-bottom: 18px;
-      border-left: 6px solid var(--secondary);
-      padding-left: 12px;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,.08);
-      overflow: hidden;
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 18px;
-    }
-
-    .card h3 {
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #e8f3ef;
-      color: var(--primary);
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: .85rem;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .timeline {
-      border-left: 4px solid var(--primary);
-      padding-left: 22px;
-    }
-
-    .day {
-      background: white;
-      margin-bottom: 18px;
-      padding: 18px;
-      border-radius: 12px;
-      box-shadow: 0 5px 14px rgba(0,0,0,.06);
-      position: relative;
-    }
-
-    .day::before {
-      content: '';
-      width: 16px;
-      height: 16px;
-      background: var(--secondary);
-      border-radius: 50%;
-      position: absolute;
-      left: -32px;
-      top: 22px;
-    }
-
-    .day h3 {
-      color: var(--primary);
-      margin-bottom: 6px;
-    }
-
-    .map-box {
-      background: white;
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 8px 20px rgba(0,0,0,.08);
-      margin-top: 20px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 360px;
-      border: 0;
-      border-radius: 12px;
-      margin-top: 12px;
-    }
-
-    footer {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 50px;
-    }
-
-    .note {
-      background: #fff7e8;
-      border-left: 5px solid var(--secondary);
-      padding: 14px;
-      border-radius: 8px;
-      margin-top: 16px;
-    }
+    header h1 { font-size: 3rem; margin-bottom: 12px; }
+    header p { font-size: 1.25rem; max-width: 850px; margin: auto; }
+    nav { background: var(--primary); padding: 12px; position: sticky; top: 0; z-index: 100; text-align: center; }
+    nav a { color: white; text-decoration: none; margin: 0 12px; font-weight: bold; }
+    nav a:hover { color: var(--secondary); }
+    section { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+    .section-title { color: var(--primary); font-size: 2rem; margin-bottom: 18px; border-left: 6px solid var(--secondary); padding-left: 12px; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card { background: var(--card); border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,.08); overflow: hidden; }
+    .card img, .thumb-grid img, .day-thumbs img { width: 100%; object-fit: cover; cursor: pointer; transition: transform .2s ease, opacity .2s ease; }
+    .card img:hover, .thumb-grid img:hover, .day-thumbs img:hover { transform: scale(1.02); opacity: .9; }
+    .card img { height: 180px; }
+    .card-content { padding: 18px; }
+    .card h3 { color: var(--primary); margin-bottom: 8px; }
+    .tag { display: inline-block; background: #e8f3ef; color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: .85rem; margin-bottom: 10px; font-weight: bold; }
+    .thumb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin-top: 24px; }
+    .thumb-item { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 14px rgba(0,0,0,.07); }
+    .thumb-item img { height: 130px; }
+    .thumb-item p { padding: 10px; font-weight: bold; color: var(--primary); font-size: .92rem; }
+    .timeline { border-left: 4px solid var(--primary); padding-left: 22px; }
+    .day { background: white; margin-bottom: 18px; padding: 18px; border-radius: 12px; box-shadow: 0 5px 14px rgba(0,0,0,.06); position: relative; }
+    .day::before { content: ''; width: 16px; height: 16px; background: var(--secondary); border-radius: 50%; position: absolute; left: -32px; top: 22px; }
+    .day h3 { color: var(--primary); margin-bottom: 6px; }
+    .drive-times { margin-top: 14px; background: #f2faf7; border-left: 5px solid var(--primary); padding: 12px; border-radius: 8px; }
+    .drive-times h4 { color: var(--primary); margin-bottom: 8px; }
+    .drive-times table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; }
+    .drive-times th, .drive-times td { border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font-size: .95rem; }
+    .drive-times th { background: #e8f3ef; color: var(--primary); }
+    .day-thumbs { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 14px; }
+    .day-thumbs img { height: 115px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,.08); }
+    .map-box { background: white; border-radius: 14px; padding: 18px; box-shadow: 0 8px 20px rgba(0,0,0,.08); margin-top: 20px; }
+    iframe { width: 100%; height: 360px; border: 0; border-radius: 12px; margin-top: 12px; }
+    .lightbox { display: none; position: fixed; z-index: 9999; inset: 0; background: rgba(0,0,0,.92); align-items: center; justify-content: center; padding: 24px; }
+    .lightbox img { max-width: 95vw; max-height: 88vh; border-radius: 12px; box-shadow: 0 8px 30px rgba(255,255,255,.15); }
+    .lightbox .close { position: absolute; top: 18px; right: 28px; color: white; font-size: 42px; cursor: pointer; font-weight: bold; }
+    footer { background: var(--primary); color: white; text-align: center; padding: 30px 20px; margin-top: 50px; }
+    .note { background: #fff7e8; border-left: 5px solid var(--secondary); padding: 14px; border-radius: 8px; margin-top: 16px; }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Family Road Trip 2026</h1>
-    <p>Three families. Three starting points. One shared adventure through Branson, St. Louis, and Chicago.</p>
-  </header>
+<header>
+  <h1>Family Road Trip 2026</h1>
+  <p>Three families. Three starting points. One shared adventure through Branson, St. Louis, and Chicago.</p>
+</header>
 
-  <nav>
-    <a href="#overview">Overview</a>
-    <a href="#routes">Routes</a>
-    <a href="#itinerary">Itinerary</a>
-    <a href="#maps">Maps</a>
-  </nav>
+<nav>
+  <a href="#overview">Overview</a>
+  <a href="#routes">Routes</a>
+  <a href="#itinerary">Itinerary</a>
+  <a href="#maps">Maps</a>
+</nav>
 
-  <section id="overview">
-    <h2 class="section-title">Trip Overview</h2>
-    <div class="card-grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Road trip" />
-        <div class="card-content">
-          <span class="tag">Starting Point</span>
-          <h3>Plano, Texas</h3>
-          <p>Our family begins from Plano, Texas and drives north toward Branson, Missouri.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=900&q=80" alt="City road" />
-        <div class="card-content">
-          <span class="tag">Starting Point</span>
-          <h3>Ashburn, Virginia</h3>
-          <p>Brother's family begins from Ashburn, Virginia and meets everyone in Branson.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Canada landscape" />
-        <div class="card-content">
-          <span class="tag">Starting Point</span>
-          <h3>Milton, Ontario</h3>
-          <p>Sister's family begins from Milton, Ontario, Canada and drives to Branson.</p>
-        </div>
-      </div>
+<section id="overview">
+  <h2 class="section-title">Trip Overview</h2>
+  <div class="card-grid">
+    <div class="card">
+      <img onclick="openLightbox(this.src)" src="assets/photos/01_branson.jpg" alt="Branson" />
+      <div class="card-content"><span class="tag">Destination 1</span><h3>Branson, Missouri</h3><p>Family meetup city with Silver Dollar City, live stage shows, and mountain activities.</p></div>
     </div>
-  </section>
-
-  <section id="routes">
-    <h2 class="section-title">Family Routes to Branson</h2>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-content">
-          <h3>Plano → Branson</h3>
-          <p>Drive from Plano, Texas to Branson, Missouri.</p>
-          <p><strong>Suggested overnight:</strong> Branson, Missouri</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <h3>Ashburn → Branson</h3>
-          <p>Drive from Ashburn, Virginia to Branson, Missouri.</p>
-          <p><strong>Suggested overnight:</strong> Branson, Missouri</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <h3>Milton → Branson</h3>
-          <p>Drive from Milton, Ontario to Branson, Missouri.</p>
-          <p><strong>Suggested overnight:</strong> Branson, Missouri</p>
-        </div>
-      </div>
+    <div class="card">
+      <img onclick="openLightbox(this.src)" src="assets/photos/02_stlouis.jpg" alt="St. Louis" />
+      <div class="card-content"><span class="tag">Destination 2</span><h3>St. Louis, Missouri</h3><p>One-night stop with a major attraction such as the Cathedral Basilica or Gateway Arch.</p></div>
     </div>
-    <div class="note">
-      Replace the map placeholders below with your own Google Maps shared routes when the dates and hotels are final.
+    <div class="card">
+      <img onclick="openLightbox(this.src)" src="assets/photos/03_chicago.jpg" alt="Chicago" />
+      <div class="card-content"><span class="tag">Destination 3</span><h3>Chicago, Illinois</h3><p>Lakefront city experience with Navy Pier, downtown, boat ride, halal dinner, and beach time.</p></div>
     </div>
-  </section>
+  </div>
 
-  <section id="itinerary">
-    <h2 class="section-title">Day-by-Day Itinerary</h2>
-    <div class="timeline">
-      <div class="day">
-        <h3>Day 1: Drive to Branson, Missouri</h3>
-        <p>All three families drive from Plano, Ashburn, and Milton to Branson. Check into hotel and rest.</p>
-      </div>
-      <div class="day">
-        <h3>Day 2: Silver Dollar City</h3>
-        <p>Spend the day at Silver Dollar City with rides, shows, food, and family fun.</p>
-      </div>
-      <div class="day">
-        <h3>Day 3: Stage Drama — David</h3>
-        <p>Attend the stage show <strong>David</strong> in Branson.</p>
-      </div>
-      <div class="day">
-        <h3>Day 4: Silver Dollar City Again</h3>
-        <p>Return to Silver Dollar City for another relaxed day at the park.</p>
-      </div>
-      <div class="day">
-        <h3>Day 5: Mountain Golf Cart Ride</h3>
-        <p>Enjoy a mountain golf cart ride in the Branson area.</p>
-      </div>
-      <div class="day">
-        <h3>Day 6: Drive to St. Louis</h3>
-        <p>All families drive together in their own cars from Branson to St. Louis. Spend the night in St. Louis.</p>
-      </div>
-      <div class="day">
-        <h3>Day 7: St. Louis Attraction + Drive to Chicago</h3>
-        <p>Visit the Cathedral Basilica of Saint Louis or another major attraction, then drive to Chicago and spend the night.</p>
-      </div>
-      <div class="day">
-        <h3>Day 8: Navy Pier, Chicago</h3>
-        <p>Spend the day enjoying Navy Pier, lake views, rides, food, and family activities.</p>
-      </div>
-      <div class="day">
-        <h3>Day 9: Downtown Chicago + Boat Ride + Halal Dinner</h3>
-        <p>Explore downtown Chicago, take a boat or ferry ride, and have halal dinner at D1.</p>
-      </div>
-      <div class="day">
-        <h3>Day 10: Lake Michigan Beach Day</h3>
-        <p>Relax at a beach on Lake Michigan and enjoy the final full day together.</p>
-      </div>
-      <div class="day">
-        <h3>Day 11: Return Home</h3>
-        <p>Sister's family returns to Milton, brother's family returns to Ashburn, and our family returns to Plano.</p>
-      </div>
-    </div>
-  </section>
+  <h2 class="section-title" style="margin-top:36px;">Attraction Highlights</h2>
+  <div class="thumb-grid">
+    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/04_silver-dollar-city.jpg" alt="Silver Dollar City" /><p>Silver Dollar City</p></div>
+    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/05_david-show.jpg" alt="David Show" /><p>Stage Drama — David</p></div>
+    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/06_golf-cart.jpg" alt="Mountain Golf Cart Ride" /><p>Mountain Golf Cart Ride</p></div>
+    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/07_stlouis-cathedral.jpg" alt="St. Louis Cathedral" /><p>St. Louis Cathedral / Attraction</p></div>
+    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/08_navy-pier.jpg" alt="Navy Pier" /><p>Navy Pier</p></div>
+    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/09_lake-beach.jpg" alt="Lake Michigan Beach" /><p>Lake Michigan Beach</p></div>
+  </div>
+</section>
 
-  <section id="maps">
-    <h2 class="section-title">Route Map Placeholders</h2>
+<section id="routes">
+  <h2 class="section-title">Family Routes to Branson</h2>
+  <div class="card-grid">
+    <div class="card"><div class="card-content"><h3>Luqman Munazza Family</h3><p><strong>Route:</strong> Plano, Texas → Branson, Missouri</p><p><strong>Approx. drive:</strong> 8 hours</p></div></div>
+    <div class="card"><div class="card-content"><h3>Naveed Sadia Family</h3><p><strong>Route:</strong> Ashburn, Virginia → Branson, Missouri</p><p><strong>Approx. drive:</strong> 15–16 hours</p></div></div>
+    <div class="card"><div class="card-content"><h3>Salman Sadia Family</h3><p><strong>Route:</strong> Milton, Ontario → Branson, Missouri</p><p><strong>Approx. drive:</strong> 13–14 hours</p></div></div>
+  </div>
+</section>
 
-    <div class="map-box">
-      <h3>Plano, TX to Branson, MO</h3>
-      <iframe src="https://www.google.com/maps?q=Plano%20TX%20to%20Branson%20MO&output=embed"></iframe>
+<section id="itinerary">
+  <h2 class="section-title">10-Day Itinerary</h2>
+  <div class="timeline">
+
+    <div class="day">
+      <h3>Day 1: Drive to Branson, Missouri</h3>
+      <p>All three families drive from Plano, Ashburn, and Milton to Branson. Check into hotel and rest.</p>
+      <div class="drive-times">
+        <h4>Driving Time</h4>
+        <table>
+          <tr><th>Family</th><th>Route</th><th>Approx. Drive Time</th></tr>
+          <tr><td>Luqman Munazza Family</td><td>Plano → Branson</td><td>8 hours</td></tr>
+          <tr><td>Naveed Sadia Family</td><td>Ashburn → Branson</td><td>15–16 hours</td></tr>
+          <tr><td>Salman Sadia Family</td><td>Milton → Branson</td><td>13–14 hours</td></tr>
+        </table>
+      </div>
+      <div class="day-thumbs"><img onclick="openLightbox(this.src)" src="assets/photos/10_drive-branson.jpg" alt="Drive to Branson" /></div>
     </div>
 
-    <div class="map-box">
-      <h3>Ashburn, VA to Branson, MO</h3>
-      <iframe src="https://www.google.com/maps?q=Ashburn%20VA%20to%20Branson%20MO&output=embed"></iframe>
+    <div class="day">
+      <h3>Day 2: Silver Dollar City</h3>
+      <p>Spend the day at Silver Dollar City with rides, shows, food, and family fun.</p>
+      <div class="day-thumbs">
+        <img onclick="openLightbox(this.src)" src="assets/photos/11_sdc_d2_1.jpg" alt="Silver Dollar City" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/11_sdc_d2_2.jpg" alt="Silver Dollar City ride" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/11_sdc_d2_3.jpg" alt="Silver Dollar City fun" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/11_sdc_d2_4.jpg" alt="Silver Dollar City street" />
+      </div>
     </div>
 
-    <div class="map-box">
-      <h3>Milton, Ontario to Branson, MO</h3>
-      <iframe src="https://www.google.com/maps?q=Milton%20Ontario%20to%20Branson%20MO&output=embed"></iframe>
+    <div class="day">
+      <h3>Day 3: Stage Drama — David</h3>
+      <p>Attend the stage show <strong>David</strong> in Branson.</p>
+      <div class="day-thumbs">
+        <img onclick="openLightbox(this.src)" src="assets/photos/12_david_d3_1.jpg" alt="David show" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/12_david_d3_2.jpg" alt="Stage show" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/12_david_d3_3.jpg" alt="Theater scene" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/12_david_d3_4.jpg" alt="Stage lights" />
+      </div>
     </div>
 
-    <div class="map-box">
-      <h3>Branson, MO to St. Louis, MO to Chicago, IL</h3>
-      <iframe src="https://www.google.com/maps?q=Branson%20MO%20to%20St.%20Louis%20MO%20to%20Chicago%20IL&output=embed"></iframe>
+    <div class="day">
+      <h3>Day 4: Silver Dollar City Again</h3>
+      <p>Return to Silver Dollar City for another relaxed day at the park.</p>
+      <div class="day-thumbs">
+        <img onclick="openLightbox(this.src)" src="assets/photos/13_sdc_d4_1.jpg" alt="Silver Dollar City train" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/13_sdc_d4_2.jpg" alt="Silver Dollar City coaster" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/13_sdc_d4_3.jpg" alt="Silver Dollar City shops" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/13_sdc_d4_4.jpg" alt="Branson boat" />
+      </div>
     </div>
-  </section>
 
-  <footer>
-    <p>Family Road Trip 2026 | Branson • St. Louis • Chicago</p>
-  </footer>
+    <div class="day">
+      <h3>Day 5: Mountain Golf Cart Ride</h3>
+      <p>Enjoy a mountain golf cart ride in the Branson area.</p>
+      <div class="day-thumbs">
+        <img onclick="openLightbox(this.src)" src="assets/photos/14_golf_d5_1.jpg" alt="Golf cart ride" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/14_golf_d5_2.jpg" alt="Mountain cart ride" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/14_golf_d5_3.jpg" alt="Outdoor cart ride" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/14_golf_d5_4.jpg" alt="Scenic cart ride" />
+      </div>
+    </div>
+
+    <div class="day">
+      <h3>Day 6: Drive to St. Louis</h3>
+      <p>All families drive together in their own cars from Branson to St. Louis. Spend the night in St. Louis.</p>
+      <div class="drive-times"><h4>Driving Time</h4><p><strong>All families:</strong> Branson → St. Louis — approximately 4 hours.</p></div>
+      <div class="day-thumbs"><img onclick="openLightbox(this.src)" src="assets/photos/15_drive-stlouis.jpg" alt="Drive to St. Louis" /></div>
+    </div>
+
+    <div class="day">
+      <h3>Day 7: Drive to Chicago</h3>
+      <p>All families drive together from St. Louis to Chicago and spend the night in Chicago.</p>
+      <div class="drive-times"><h4>Driving Time</h4><p><strong>All families:</strong> St. Louis → Chicago — approximately 5 hours.</p></div>
+      <div class="day-thumbs"><img onclick="openLightbox(this.src)" src="assets/photos/16_drive-chicago.jpg" alt="Drive to Chicago" /></div>
+    </div>
+
+    <div class="day">
+      <h3>Day 8: St. Louis Attraction + Chicago Arrival</h3>
+      <p>Visit the Cathedral Basilica of Saint Louis or another major attraction before continuing toward Chicago.</p>
+      <div class="day-thumbs">
+        <img onclick="openLightbox(this.src)" src="assets/photos/17_d8_1_cathedral.jpg" alt="Cathedral" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/17_d8_2_cathedral.jpg" alt="Cathedral interior" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/17_d8_3_forest-park.jpg" alt="Forest Park" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/17_d8_4_arch.jpg" alt="St. Louis Arch" />
+      </div>
+    </div>
+
+    <div class="day">
+      <h3>Day 9: Chicago — Navy Pier, Downtown, Boat Ride, Halal Dinner</h3>
+      <p>Spend the day at Navy Pier, explore downtown Chicago, take a boat or ferry ride, and enjoy halal dinner at D1.</p>
+      <div class="day-thumbs">
+        <img onclick="openLightbox(this.src)" src="assets/photos/18_d9_1.jpg" alt="Navy Pier" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/18_d9_2.jpg" alt="Navy Pier sign" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/19_d10_2_ferry.jpg" alt="Ferry ride" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/19_d10_4_d1-dinner.jpg" alt="D1 halal dinner" />
+      </div>
+    </div>
+
+    <div class="day">
+      <h3>Day 10: Lake Michigan Beach + Return Home</h3>
+      <p>Enjoy Lake Michigan beach time, then families begin their return journeys home.</p>
+      <div class="drive-times">
+        <h4>Return Driving Time</h4>
+        <table>
+          <tr><th>Family</th><th>Route</th><th>Approx. Drive Time</th></tr>
+          <tr><td>Luqman Munazza Family</td><td>Chicago → Plano</td><td>14–15 hours</td></tr>
+          <tr><td>Naveed Sadia Family</td><td>Chicago → Ashburn</td><td>10–11 hours</td></tr>
+          <tr><td>Salman Sadia Family</td><td>Chicago → Milton</td><td>8–9 hours</td></tr>
+        </table>
+      </div>
+      <div class="day-thumbs">
+        <img onclick="openLightbox(this.src)" src="assets/photos/20_d11_1_beach.jpg" alt="Lake Michigan beach" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/21_return-plano.jpg" alt="Return to Plano" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/22_return-ashburn.jpg" alt="Return to Ashburn" />
+        <img onclick="openLightbox(this.src)" src="assets/photos/23_return-milton.jpg" alt="Return to Milton" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="maps">
+  <h2 class="section-title">Route Map Placeholders</h2>
+  <div class="map-box"><h3>Luqman Munazza Family: Plano, TX to Branson, MO</h3><iframe src="https://www.google.com/maps?q=Plano%20TX%20to%20Branson%20MO&output=embed"></iframe></div>
+  <div class="map-box"><h3>Naveed Sadia Family: Ashburn, VA to Branson, MO</h3><iframe src="https://www.google.com/maps?q=Ashburn%20VA%20to%20Branson%20MO&output=embed"></iframe></div>
+  <div class="map-box"><h3>Salman Sadia Family: Milton, Ontario to Branson, MO</h3><iframe src="https://www.google.com/maps?q=Milton%20Ontario%20to%20Branson%20MO&output=embed"></iframe></div>
+  <div class="map-box"><h3>Branson, MO to St. Louis, MO to Chicago, IL</h3><iframe src="https://www.google.com/maps?q=Branson%20MO%20to%20St.%20Louis%20MO%20to%20Chicago%20IL&output=embed"></iframe></div>
+</section>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="Full screen preview" />
+</div>
+
+<footer><p>Family Road Trip 2026 | Branson • St. Louis • Chicago</p></footer>
+
+<script>
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.getElementById('lightbox-img').src = '';
+  }
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') closeLightbox();
+  });
+</script>
 
 </body>
 </html>
