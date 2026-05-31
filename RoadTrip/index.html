@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Road Trip 2026</title>
+  <style>
+    :root {
+      --primary: #1f4f46;
+      --secondary: #f4a261;
+      --light: #f8f7f2;
+      --dark: #222;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') center/cover;
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    nav {
+      background: var(--primary);
+      padding: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 18px;
+      border-left: 6px solid var(--secondary);
+      padding-left: 12px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e8f3ef;
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: .85rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .timeline {
+      border-left: 4px solid var(--primary);
+      padding-left: 22px;
+    }
+
+    .day {
+      background: white;
+      margin-bottom: 18px;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 5px 14px rgba(0,0,0,.06);
+      position: relative;
+    }
+
+    .day::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: var(--secondary);
+      border-radius: 50%;
+      position: absolute;
+      left: -32px;
+      top: 22px;
+    }
+
+    .day h3 {
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .map-box {
+      background: white;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 360px;
+      border: 0;
+      border-radius: 12px;
+      margin-top: 12px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    .note {
+      background: #fff7e8;
+      border-left: 5px solid var(--secondary);
+      padding: 14px;
+      border-radius: 8px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Family Road Trip 2026</h1>
+    <p>Three families. Three starting points. One shared adventure through Branson, St. Louis, and Chicago.</p>
+  </header>
+
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#routes">Routes</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#maps">Maps</a>
+  </nav>
+
+  <section id="overview">
+    <h2 class="section-title">Trip Overview</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Road trip" />
+        <div class="card-content">
+          <span class="tag">Starting Point</span>
+          <h3>Plano, Texas</h3>
+          <p>Our family begins from Plano, Texas and drives north toward Branson, Missouri.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=900&q=80" alt="City road" />
+        <div class="card-content">
+          <span class="tag">Starting Point</span>
+          <h3>Ashburn, Virginia</h3>
+          <p>Brother's family begins from Ashburn, Virginia and meets everyone in Branson.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Canada landscape" />
+        <div class="card-content">
+          <span class="tag">Starting Point</span>
+          <h3>Milton, Ontario</h3>
+          <p>Sister's family begins from Milton, Ontario, Canada and drives to Branson.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="routes">
+    <h2 class="section-title">Family Routes to Branson</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-content">
+          <h3>Plano → Branson</h3>
+          <p>Drive from Plano, Texas to Branson, Missouri.</p>
+          <p><strong>Suggested overnight:</strong> Branson, Missouri</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Ashburn → Branson</h3>
+          <p>Drive from Ashburn, Virginia to Branson, Missouri.</p>
+          <p><strong>Suggested overnight:</strong> Branson, Missouri</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Milton → Branson</h3>
+          <p>Drive from Milton, Ontario to Branson, Missouri.</p>
+          <p><strong>Suggested overnight:</strong> Branson, Missouri</p>
+        </div>
+      </div>
+    </div>
+    <div class="note">
+      Replace the map placeholders below with your own Google Maps shared routes when the dates and hotels are final.
+    </div>
+  </section>
+
+  <section id="itinerary">
+    <h2 class="section-title">Day-by-Day Itinerary</h2>
+    <div class="timeline">
+      <div class="day">
+        <h3>Day 1: Drive to Branson, Missouri</h3>
+        <p>All three families drive from Plano, Ashburn, and Milton to Branson. Check into hotel and rest.</p>
+      </div>
+      <div class="day">
+        <h3>Day 2: Silver Dollar City</h3>
+        <p>Spend the day at Silver Dollar City with rides, shows, food, and family fun.</p>
+      </div>
+      <div class="day">
+        <h3>Day 3: Stage Drama — David</h3>
+        <p>Attend the stage show <strong>David</strong> in Branson.</p>
+      </div>
+      <div class="day">
+        <h3>Day 4: Silver Dollar City Again</h3>
+        <p>Return to Silver Dollar City for another relaxed day at the park.</p>
+      </div>
+      <div class="day">
+        <h3>Day 5: Mountain Golf Cart Ride</h3>
+        <p>Enjoy a mountain golf cart ride in the Branson area.</p>
+      </div>
+      <div class="day">
+        <h3>Day 6: Drive to St. Louis</h3>
+        <p>All families drive together in their own cars from Branson to St. Louis. Spend the night in St. Louis.</p>
+      </div>
+      <div class="day">
+        <h3>Day 7: St. Louis Attraction + Drive to Chicago</h3>
+        <p>Visit the Cathedral Basilica of Saint Louis or another major attraction, then drive to Chicago and spend the night.</p>
+      </div>
+      <div class="day">
+        <h3>Day 8: Navy Pier, Chicago</h3>
+        <p>Spend the day enjoying Navy Pier, lake views, rides, food, and family activities.</p>
+      </div>
+      <div class="day">
+        <h3>Day 9: Downtown Chicago + Boat Ride + Halal Dinner</h3>
+        <p>Explore downtown Chicago, take a boat or ferry ride, and have halal dinner at D1.</p>
+      </div>
+      <div class="day">
+        <h3>Day 10: Lake Michigan Beach Day</h3>
+        <p>Relax at a beach on Lake Michigan and enjoy the final full day together.</p>
+      </div>
+      <div class="day">
+        <h3>Day 11: Return Home</h3>
+        <p>Sister's family returns to Milton, brother's family returns to Ashburn, and our family returns to Plano.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maps">
+    <h2 class="section-title">Route Map Placeholders</h2>
+
+    <div class="map-box">
+      <h3>Plano, TX to Branson, MO</h3>
+      <iframe src="https://www.google.com/maps?q=Plano%20TX%20to%20Branson%20MO&output=embed"></iframe>
+    </div>
+
+    <div class="map-box">
+      <h3>Ashburn, VA to Branson, MO</h3>
+      <iframe src="https://www.google.com/maps?q=Ashburn%20VA%20to%20Branson%20MO&output=embed"></iframe>
+    </div>
+
+    <div class="map-box">
+      <h3>Milton, Ontario to Branson, MO</h3>
+      <iframe src="https://www.google.com/maps?q=Milton%20Ontario%20to%20Branson%20MO&output=embed"></iframe>
+    </div>
+
+    <div class="map-box">
+      <h3>Branson, MO to St. Louis, MO to Chicago, IL</h3>
+      <iframe src="https://www.google.com/maps?q=Branson%20MO%20to%20St.%20Louis%20MO%20to%20Chicago%20IL&output=embed"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>Family Road Trip 2026 | Branson • St. Louis • Chicago</p>
+  </footer>
+
+</body>
+</html>
