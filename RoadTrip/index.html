@@ -88,6 +88,26 @@
       font-size: .92rem;
     }
 
+    .video-thumb {
+    position: relative;
+}
+
+.video-thumb a {
+    display: block;
+    position: relative;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,.8);
+    pointer-events: none;
+}
+
     footer { background: var(--primary); color: white; text-align: center; padding: 30px 20px; margin-top: 50px; }
     .note { background: #fff7e8; border-left: 5px solid var(--secondary); padding: 14px; border-radius: 8px; margin-top: 16px; }
   </style>
@@ -143,12 +163,59 @@ Plano ───┘</div>
 
   <h2 class="section-title" style="margin-top:36px;">Attraction Highlights</h2>
   <div class="thumb-grid">
-    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/04_silver-dollar-city.jpg" alt="Silver Dollar City" /><p>Silver Dollar City</p></div>
-    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/05_david-show.jpg" alt="David Show" /><p>Stage Drama — David</p></div>
-    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/06_golf-cart.jpg" alt="Mountain Golf Cart Ride" /><p>Mountain Golf Cart Ride</p></div>
-    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/07_stlouis-cathedral.jpg" alt="St. Louis Cathedral" /><p>St. Louis Cathedral / Attraction</p></div>
-    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/08_navy-pier.jpg" alt="Navy Pier" /><p>Navy Pier</p></div>
-    <div class="thumb-item"><img onclick="openLightbox(this.src)" src="assets/photos/09_lake-beach.jpg" alt="Lake Michigan Beach" /><p>Lake Michigan Beach</p></div>
+  <div class="thumb-item">
+    <a href="https://www.youtube.com/watch?v=0HEwnm5PbAg
+       target="_blank">
+        <img src="assets/photos/04_silver-dollar-city.jpg">
+        <div class="play-button">▶</div>
+    </a>
+    <p>Silver Dollar City</p>
+</div>
+
+<div class="thumb-item">
+    <a href="https://www.youtube.com/watch?v=fb8wKrOlgNs
+       target="_blank">
+        <img src="assets/photos/05_david-show.jpg">
+        <div class="play-button">▶</div>
+    </a>
+    <p>David Show</p>
+</div>
+
+<div class="thumb-item">
+    <a href="https://www.youtube.com/watch?v=9R0Ohw-vi04
+       target="_blank">
+        <img src="assets/photos/06_golf-cart.jpg">
+        <div class="play-button">▶</div>
+    </a>
+    <p>Mountain Golf Cart Ride</p>
+</div>
+
+<div class="thumb-item">
+    <a href="https://www.youtube.com/watch?v=90DPCoLlyL8"
+       target="_blank">
+        <img src="assets/photos/07_stlouis-cathedral.jpg">
+        <div class="play-button">▶</div>
+    </a>
+    <p>St. Louis Cathedral</p>
+</div>
+
+<div class="thumb-item">
+    <a href="https://www.youtube.com/watch?v=vfozrRFSKuM"
+       target="_blank">
+        <img src="assets/photos/08_navy-pier.jpg">
+        <div class="play-button">▶</div>
+    </a>
+    <p>Navy Pier</p>
+</div>
+
+<div class="thumb-item">
+    <a href="https://www.youtube.com/watch?v=lOTW6ASBYVk"
+       target="_blank">
+        <img src="assets/photos/09_lake-beach.jpg">
+        <div class="play-button">▶</div>
+    </a>
+    <p>Lake Michigan Beach</p>
+</div>
   </div>
 </section>
 
